@@ -27,6 +27,7 @@ $(function() {
           </ul>
           <ul class="nav navbar-nav navbar-right">
             {% if session.logged_in %}
+            <li><a href="/dashboard">{{ session.username }}님 정보</a></li>
             <li><a href="/logout">Logout</a></li>
             {% else %}
             <li><a href="/register">Register</a></li>

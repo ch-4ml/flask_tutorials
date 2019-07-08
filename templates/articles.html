@@ -6,6 +6,10 @@
 {% for article in articles %}
     <li class="list-group-item">
         <a href="articles/{{article.id}}">{{article.title}}</a>
+        {% if article.author == session.username %}
+        <a href="edit_article/{{article.id}}" class="btn btn-default pullright">Edit</a>
+        <a href="delete_article/{{article.id}}" class="btn btn-danger">Delete</a>
+        {% endif %}
     </li>
 {% endfor %}
 </ul>

@@ -13,12 +13,13 @@
 <th></th>
 </tr>
 {% for article in articles %}
-<tr>
+<tr style="cursor:pointer;" onClick="location.href='articles/{{article.id}}'" onMouseOver ="Window.status='articles/{{article.id}}'" onMouseOut=" window.status =''">
 <td>{{article.id}}</td>
 <td>{{article.title}}</td>
 <td>{{article.author}}</td>
 <td>{{article.create_date}}</td>
 <td><a href="edit_article/{{article.id}}" class="btn btn-default pullright">Edit</td>
-<td><a href="#" class="btn btn-danger">Delete</a></td>
-{% endfor %} </table>
+<td><a href="delete_article/{{article.id}}" class="btn btn-danger">Delete</a></td>
+{% endfor %}
+</table>
 {% endblock %}
