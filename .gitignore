@@ -1,5 +1,5 @@
-__pycache__
-include
-Lib
-Scripts
-tcl
+__pycache__/
+Include/
+Lib/
+Scripts/
+tcl/
